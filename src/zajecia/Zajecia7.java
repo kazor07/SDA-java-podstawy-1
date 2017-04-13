@@ -33,6 +33,8 @@ public class Zajecia7 {
         int[][] matrix = {{1,2,3}, {3,2,1}, {2, 3, 1}};
 //        printMatrix(multiplyBy(matrix, 3));
         System.out.println(sumOfElements(matrix));
+//      tojest testowy komentarz
+
     }
 
     //(-15 : 15)

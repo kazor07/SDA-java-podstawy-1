@@ -8,7 +8,8 @@ public class ZadaniaZeScannerem {
 //        isEven();
 //        displayEvenElements();
 //        addPreviousElement();
-        fillArrayWithUnknownSize();
+//        fillArrayWithUnknownSize();
+        countEvenElements();
     }
 
     public static void addElementsMultipliedBy() {
@@ -133,6 +134,7 @@ public class ZadaniaZeScannerem {
                 counter++; //counter = counter + 1 lub counter += 1
             }
         }
+        System.out.println(counter);
     }
 
     public static void max() {

@@ -15,8 +15,11 @@ public class testy {
 //        sumofpositive();
 //        countEvenelements();
 //            sumofoddelements();
-        displaynexttoo();
- }
+//        displaynexttoo();
+        String message = "sdsdasdasdasdasdads FDSFDSFSFSFSDS";
+
+        System.out.println(switchCase(message));
+    }
     public static void checkAge(){
         Scanner scanner = new Scanner(System.in);
         System.out.println("podaj swoj wiek :");
@@ -140,4 +143,21 @@ public class testy {
 
         }
     }
+    public static String switchCase(String message){
+        char[] charArray = message.toCharArray();
+        for (int i = 0; i < charArray.length; i++) {
+            if (charArray[i] >= 97  && charArray[i] <= 122){
+                charArray[i] -= 32;
+            } else if(charArray[i] >= 65  && charArray[i] <= 90){
+
+                charArray[i] += 32;
+
+
+            }
+        }
+
+        return String.valueOf(charArray);
+    }
+
+
 }

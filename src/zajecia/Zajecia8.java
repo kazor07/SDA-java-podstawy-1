@@ -5,17 +5,41 @@ public class Zajecia8 {
 //        System.out.println(countCharakterIn("Ala ma kota", 'a'));
 //        System.out.println(countCharakterIn("Ala ma kota i dwa psy", 'a'));
 //        System.out.println(countCharakterIn("ala ma kota i dwa psy", 'a'));
+//            String message = "KooT";
         String pokemonMessage = "AjKJYasgsfthf";
 //        System.out.println(countCapitalLetters(pokemonMessage));
 //        System.out.println(countSmallLetters(pokemonMessage));
 //        System.out.println("ilosc slow " + countWords(pokemonMessage));
 //            switchCase(pokemonMessage);
-        System.out.println(ananimOf(pokemonMessage));
+//        System.out.println(ananimOf(pokemonMessage));
 
+        System.out.println(toLowerCase(pokemonMessage));
+
+    }
+    public static String  toUpperCase(String message) {
+        char[] charArray = message.toCharArray();
+        for (int i = 0; i < charArray.length; i++) {
+            if (charArray[i] >= 97 && charArray[i] <= 122) {
+                charArray[i] -= 32;
+            }
+        }
+        return String.valueOf(charArray);
+//        return message.split(" ").length;
 
 
     }
+    public static String  toLowerCase(String message) {
+        char[] charArray = message.toCharArray();
+        for (int i = 0; i < charArray.length; i++) {
+            if (charArray[i] >= 65 && charArray[i] <= 90) {
+                charArray[i] += 32;
+            }
+        }
+        return String.valueOf(charArray);
+//        return message.split(" ").length;
 
+
+    }
     public static int countCharakterInoption(String message, char charakter){
 
         int counter = 0;
@@ -49,7 +73,6 @@ public class Zajecia8 {
             }
         }
         return counter;
-
     }
 
     public static int  countSmallLetters(String message){
@@ -75,22 +98,19 @@ public class Zajecia8 {
             }
 
         }
-//        return counter ;
-        return message.split(" ").length;
+        return counter ;
+//        return message.split(" ").length;
 
     }
-    public static String  switchCase(String message){
+    public static String switchCase(String message){
         char[] charArray = message.toCharArray();
         for (int i = 0;  i < charArray.length; i++) {
             if (charArray[i] >= 97 &&  charArray[i] <= 122){
                charArray[i] -= 32;
-
-            }else if (charArray[i] >= 65 &&  charArray[i] <= 90){
+            }else
+                if (charArray[i] >= 65 &&  charArray[i] <= 90){
                 charArray[i] += 32;
-
             }
-
-
         }
 
 //        return new String(charArray);
@@ -100,17 +120,6 @@ public class Zajecia8 {
 
     }
     //message wspak
-//    public static String ananimOf (String message){
-//        char[] charArray = message.toCharArray();
-//        char[] resultArray = new char[charArray.length];
-//        for (int i = 0; i <charArray.length ; i++) {
-//            resultArray[i] = charArray[]
-//
-//        }
-//
-//        return null
-//
-//    }
 
     public static String ananimOf (String message){
         char[] charArray = message.toCharArray();
@@ -130,7 +139,7 @@ public class Zajecia8 {
         char[] charArray = message.toCharArray();
         boolean palindrome = true;
         int i = 0;
-        while (palindrome){
+        while (palindrome && i < charArray.length/2){
             if (charArray[i] != charArray[charArray.length -i -1]){
                 palindrome = false;
             }
@@ -155,7 +164,7 @@ public class Zajecia8 {
         }
         char[] charArray = message.toCharArray();
         System.out.println(message.length());
-        System.out.println(message.length());
+        System.out.println(charArray.length);
     }
 }
 

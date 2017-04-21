@@ -6,14 +6,16 @@ public class Zajecia8 {
 //        System.out.println(countCharakterIn("Ala ma kota i dwa psy", 'a'));
 //        System.out.println(countCharakterIn("ala ma kota i dwa psy", 'a'));
 //            String message = "KooT";
-        String pokemonMessage = "AjKJYasgsfthf";
+//        String pokemonMessage = "AjKJYasgsfthf";
+        String stringdosumowania = "ala ma 2 koty i 3 chomiki";
+
 //        System.out.println(countCapitalLetters(pokemonMessage));
 //        System.out.println(countSmallLetters(pokemonMessage));
 //        System.out.println("ilosc slow " + countWords(pokemonMessage));
 //            switchCase(pokemonMessage);
 //        System.out.println(ananimOf(pokemonMessage));
 
-        System.out.println(toLowerCase(pokemonMessage));
+        System.out.println(sumofNumbers(stringdosumowania));
 
     }
     public static String  toUpperCase(String message) {
@@ -36,6 +38,19 @@ public class Zajecia8 {
             }
         }
         return String.valueOf(charArray);
+//        return message.split(" ").length;
+
+
+    }
+    public static int  sumofNumbers(String message) {
+        char[] charArray = message.toCharArray();
+        int sum = 0;
+        for (int i = 0; i < charArray.length; i++) {
+            if (charArray[i] >= 48 && charArray[i] <= 57) {
+                sum += charArray[i] - 48;
+            }
+        }
+        return sum;
 //        return message.split(" ").length;
 
 
